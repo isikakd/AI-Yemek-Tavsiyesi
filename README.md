@@ -35,5 +35,5 @@ python app.py
 
 ---
 
-Made with ❤️ by **Işık Akdoğan**
+Made with by **Işık Akdoğan**
 
