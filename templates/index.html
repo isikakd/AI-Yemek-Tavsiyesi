@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>🍽️ AI Yemek Önerisi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="badge">✨ Yapay Zeka Destekli</div>
+    <h1>AI Yemek Önerisi</h1>
+    <p>Tercihlerinize göre kişiselleştirilmiş tarifler, kaloriler ve besin değerleri</p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('suggest')">🍽️ Yemek Öner</button>
+    <button class="tab"        onclick="switchTab('fridge')">🧑‍🍳 Malzeme ile Bul</button>
+  </div>
+
+  <!-- PANEL 1: Yemek Öner -->
+  <div id="panel-suggest" class="panel active">
+    <div class="form-card">
+      <div class="form-grid">
+        <div class="field">
+          <label>Öğün</label>
+          <select id="meal">
+            <option>Kahvaltı</option>
+            <option>Öğle Yemeği</option>
+            <option selected>Akşam Yemeği</option>
+            <option>Ara Öğün</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Diyet</label>
+          <select id="diet">
+            <option>Hepsi</option>
+            <option>Vejetaryen</option>
+            <option>Vegan</option>
+            <option>Glutensiz</option>
+            <option>Düşük Kalorili</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Mutfak</label>
+          <select id="cuisine">
+            <option selected>Her İkisi</option>
+            <option>Türk Mutfağı</option>
+            <option>Dünya Mutfağı</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" id="btn-suggest" onclick="getSuggestions()">
+        <span>🔮</span> Yemek Öner
+      </button>
+    </div>
+    <div id="suggest-spinner" class="spinner">
+      <div class="spin"></div>
+      <p>AI sizin için yemekler hazırlıyor…</p>
+    </div>
+    <div id="suggest-error" class="error-box" style="display:none"></div>
+    <div id="suggest-results" class="results"></div>
+  </div>
+
+  <!-- PANEL 2: Malzeme ile Bul -->
+  <div id="panel-fridge" class="panel">
+    <div class="form-card">
+      <div class="field" style="margin-bottom:20px">
+        <label>Elindeki malzemeleri yaz</label>
+        <textarea id="fridge-text" placeholder="Örn: Evde yumurtam, ıspanağım ve lor peyniri var, ne yapabilirim?"></textarea>
+      </div>
+      <button class="btn" id="btn-fridge" onclick="getFridgeIdeas()">
+        <span>🧑‍🍳</span> Tarif Bul
+      </button>
+    </div>
+    <div id="fridge-spinner" class="spinner">
+      <div class="spin"></div>
+      <p>AI malzemelerinizi değerlendiriyor…</p>
+    </div>
+    <div id="fridge-error" class="error-box" style="display:none"></div>
+    <div id="fridge-results" class="results"></div>
+  </div>
+
+</div>
+
+<!-- Tarif Detay Modal -->
+<div id="overlay" class="overlay" onclick="closeModal(event)">
+  <div class="modal" id="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span id="m-emoji" class="modal-emoji"></span>
+    <div id="m-title" class="modal-title"></div>
+    <div id="m-kcal"  class="modal-kcal"></div>
+
+    <div class="section-title">Besin Değerleri</div>
+    <div class="macro-row">
+      <div class="macro"><div id="m-protein" class="macro-val"></div><div class="macro-lbl">Protein</div></div>
+      <div class="macro"><div id="m-carb"    class="macro-val"></div><div class="macro-lbl">Karbonhidrat</div></div>
+      <div class="macro"><div id="m-fat"     class="macro-val"></div><div class="macro-lbl">Yağ</div></div>
+    </div>
+
+    <div class="section-title">Malzemeler</div>
+    <div id="m-ingredients" class="ingredient-list" style="margin-bottom:20px"></div>
+
+    <div class="section-title">Tarif</div>
+    <div id="m-recipe" class="recipe-text"></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+# Sadece Python standart kütüphanesi kullanılıyor
+# Ekstra kurulum gerekmez!
