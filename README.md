@@ -1,45 +1,39 @@
-# 🍽️ AI Yemek Öneri Uygulaması
+# 🍽️ AI Yemek Tavsiyesi
 
-Ollama ile çalışan, tamamen lokal ve ücretsiz AI yemek öneri sitesi.
+Yapay zeka destekli yemek öneri web uygulaması.
+Kullanıcıların **öğün, diyet veya evdeki malzemelere göre** tarif bulmasını sağlar.
 
-## Proje Yapısı
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
+![AI](https://img.shields.io/badge/AI-Llama3.2-green)
 
-```
-yemek_oneri/
-├── app.py              # Ana giriş noktası
-├── config.py           # Tüm ayarlar
-├── ai/
-│   ├── client.py       # Ollama bağlantısı
-│   └── prompts.py      # AI prompt şablonları
-├── routes/
-│   └── handler.py      # HTTP istek yöneticisi
-├── templates/
-│   └── index.html      # HTML arayüzü
-└── static/
-    ├── style.css        # Stiller
-    └── app.js           # JavaScript
-```
+## 🌐 Demo
 
-## Kurulum
+👉 https://isikakd.github.io/AI-Yemek-Tavsiyesi/
+
+## ✨ Özellikler
+
+* 🍳 Öğüne göre yemek önerisi
+* 🥗 Malzemeye göre tarif bulma
+* 📊 Kalori ve besin bilgisi
+* 📖 Adım adım tarif gösterimi
+
+## 🚀 Çalıştırma
 
 ```bash
-# 1. Ollama indir
-# https://ollama.com/download
-
-# 2. Modeli indir (bir kez)
+git clone https://github.com/isikakd/AI-Yemek-Tavsiyesi.git
+cd AI-Yemek-Tavsiyesi
 ollama pull llama3.2
-
-# 3. Uygulamayı başlat
 python app.py
-
-# 4. Tarayıcıda aç
-# http://localhost:8765
 ```
 
-## Özellikler
+## 🛠️ Teknolojiler
 
-- 🤖 Tamamen lokal AI (internet yok, ücretsiz)
-- 🍽️ Öğün / diyet / mutfak tercihine göre öneri
-- 🧑‍🍳 Eldeki malzemelere göre tarif bulma
-- 🔥 Kalori ve besin değerleri
-- 📱 Responsive tasarım
+* Python
+* Ollama
+* Llama 3.2
+* HTML · CSS · JavaScript
+
+---
+
+Made with ❤️ by **Işık Akdoğan**
+
