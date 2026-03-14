@@ -5,10 +5,6 @@ AI-powered web application that recommends recipes based on **meal type, diet pr
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![AI](https://img.shields.io/badge/AI-Llama3.2-green)
 
-## 🌐 Demo
-
-👉 https://isikakd.github.io/AI-Food-Recommendation-System-/
-
 ## ✨ Features
 
 - 🍳 Meal-based recipe recommendations
