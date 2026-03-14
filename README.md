@@ -1,32 +1,28 @@
-# 🍽️ AI Yemek Tavsiyesi
+# 🍽️ AI Food Recommendation System
 
-Yapay zeka destekli yemek öneri web uygulaması.
-Kullanıcıların **öğün, diyet veya evdeki malzemelere göre** tarif bulmasını sağlar.
+AI-powered web application that recommends recipes based on **meal type, diet preferences, or available ingredients**.
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
 ![AI](https://img.shields.io/badge/AI-Llama3.2-green)
 
 ## 🌐 Demo
 
-👉 https://isikakd.github.io/AI-Yemek-Tavsiyesi/
+👉 https://isikakd.github.io/AI-Food-Recommendation-System-/
 
-## ✨ Özellikler
+## ✨ Features
 
-* 🍳 Öğüne göre yemek önerisi
-* 🥗 Malzemeye göre tarif bulma
-* 📊 Kalori ve besin bilgisi
-* 📖 Adım adım tarif gösterimi
+- 🍳 Meal-based recipe recommendations
+- 🥗 Ingredient-based recipe search
+- 📊 Calorie and nutrition information
+- 📖 Step-by-step cooking instructions
 
-## 🚀 Çalıştırma
+## 🚀 Run Locally
 
 ```bash
 git clone https://github.com/isikakd/AI-Yemek-Tavsiyesi.git
 cd AI-Yemek-Tavsiyesi
 ollama pull llama3.2
 python app.py
-```
-
-## 🛠️ Teknolojiler
 
 * Python
 * Ollama
